@@ -686,6 +686,11 @@ body.nav-active {
   gap: 36px;
   border-radius: var(--radius-8);
 }
+@media screen and (max-width: 480px) {
+  .stats-card {
+    flex-wrap: wrap;
+  }
+}
 
 .stats-card .card-text > * {
   color: var(--white);
