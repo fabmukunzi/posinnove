@@ -14,17 +14,13 @@ const antdTheme: ThemeConfig = {
   components: {
     Button: {
       defaultBg: '#091e6a',
-      // colorPrimaryBg:'#091e6a',
-      // groupBorderColor:'#091e6a',
       controlHeight: 40,
-      // fontWeight: 'bold',
       colorText: 'white',
-      // textHoverBg: 'white'
+      primaryShadow: 'none',
     },
     Input: {
-      controlHeight: 32,
-      controlHeightLG: 45,
-      controlHeightSM: 24,
+      lineHeight: 2.5,
+      colorBorder: '#091e6a',
     },
     Menu: {
       lineHeight: 1,
