@@ -6,7 +6,7 @@ import { Users } from 'lucide-react';
 
 const Offers = () => {
   return (
-    <div id="whatweoffer" className="text-center py-3">
+    <div id="whatweoffer" className="text-center py-3 pl-20">
       <h1 className="text-primary font-bold text-2xl">What we offer</h1>
       <h1 className="my-2">
         We are competitive E-learning platform due to offerings{' '}

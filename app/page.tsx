@@ -26,7 +26,7 @@ export default function Home() {
         Posinnove
       </h1>
       <div className="flex gap-3">
-        <Link isExternal href="#">
+        <Link isExternal href="https://dev.posinnove.com/login">
           <Button className="bg-primary rounded-full px-10 text-white">
             Get started
           </Button>

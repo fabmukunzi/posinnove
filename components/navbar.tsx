@@ -19,7 +19,6 @@ import { siteConfig } from '@/config/site';
 import NextLink from 'next/link';
 import clsx from 'clsx';
 
-import { ThemeSwitch } from '@/components/theme-switch';
 import {
   TwitterIcon,
   GithubIcon,
@@ -30,6 +29,7 @@ import {
 
 import { Logo } from '@/components/icons';
 import { navItems } from '@/config/routes';
+import { Chip } from '@nextui-org/react';
 
 export const Navbar = () => {
   return (
@@ -55,6 +55,12 @@ export const Navbar = () => {
               >
                 {item.label}
               </NextLink>
+              {/* {item.label === 'Explore Program' && (
+                <>
+                  <br />
+                  <Chip size="sm">Coming Soon</Chip>
+                </>
+              )} */}
             </NavbarItem>
           ))}
         </ul>
@@ -76,7 +82,7 @@ export const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem> */}
         <NavbarItem className="hidden md:flex">
-          <Link isExternal href="#">
+          <Link isExternal href="https://dev.posinnove.com/login">
             <Button className="rounded-full px-10 text-primary">
               Get started
             </Button>
@@ -88,7 +94,7 @@ export const Navbar = () => {
         <Link isExternal href={siteConfig.links.github} aria-label="Github">
           <GithubIcon className="text-default-500" />
         </Link>
-        <ThemeSwitch />
+        {/* <ThemeSwitch /> */}
         <NavbarMenuToggle />
       </NavbarContent>
 

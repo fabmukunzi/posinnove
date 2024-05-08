@@ -23,6 +23,7 @@
 		"@nextui-org/switch": "^2.0.28",
 		"@nextui-org/system": "2.1.0",
 		"@nextui-org/theme": "2.2.0",
+		"@nextui-org/user": "^2.0.28",
 		"@phosphor-icons/react": "^2.1.5",
 		"@react-aria/ssr": "^3.9.2",
 		"@react-aria/visually-hidden": "^3.8.10",

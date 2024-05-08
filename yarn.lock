@@ -1187,7 +1187,7 @@
   resolved "https://registry.yarnpkg.com/@nextui-org/use-update-effect/-/use-update-effect-2.0.5.tgz#b949d5403ba05879f2a6bd78b586b8bed7839ee5"
   integrity sha512-4r2CXAD598xc2ifMu97kf8V/lj+NDct2oITbxgXeV4ezWaXHy5/26r1iyVnBzRN/VBz3fwHx3hHdftzcYSZxdA==
 
-"@nextui-org/user@2.0.28":
+"@nextui-org/user@2.0.28", "@nextui-org/user@^2.0.28":
   version "2.0.28"
   resolved "https://registry.yarnpkg.com/@nextui-org/user/-/user-2.0.28.tgz#fe47373475fa5141f49a22d25d52d051518727c8"
   integrity sha512-1WaAZSIzgRMaA+2+BACelxIE4YvPN6MFW+I3SvODwn98aju1yU485akxjenc7XM/5CC6TGZDAXiFz2VcEFIcZA==
