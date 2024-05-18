@@ -2,13 +2,83 @@ import Image from 'next/image';
 import Image1 from '@/public/image 6.png';
 import Image2 from '@/public/image 4.png';
 import { valuesArray } from '@/utils/offers';
-import { Card, CardBody, CardHeader } from '@nextui-org/card';
-import { User } from '@nextui-org/react';
-import home1 from "@/public/home.png"
+import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
+import { Button, User } from '@nextui-org/react';
+import home1 from '@/public/home.png';
+import collab from '@/public/collab.svg';
+import accountability from '@/public/account.svg';
+import team from '@/public/Onboarding.png';
+import mugisha from '@/public/mugisha.jpg';
+import bonheur from '@/public/Bonheur.jpg';
+import fab from '@/public/fab.png';
+import jeanette from '@/public/jeannette.png';
+import paradis from '@/public/paradis.jpg';
+import { Linkedin } from 'lucide-react';
+import Link from 'next/link';
 export default function AboutPage() {
+  const coreValues = [
+    {
+      title: 'Ownership',
+      description:
+        'Ownership is a core value of our team, driving accountability, commitment, and a sense of responsibility for our collective goals and outcomes.',
+
+      image: home1,
+    },
+    {
+      title: 'Teamwork',
+      description:
+        'Teamwork is a core value of our team, fostering collaboration, synergy, and mutual support to achieve our shared objectives effectively.',
+      image: team,
+    },
+    {
+      title: 'Accountability',
+      description:
+        'Accountability is a core value of our team, emphasizing individual responsibility, transparency, and integrity in delivering on our commitments and meeting expectations.',
+      image: accountability,
+    },
+    {
+      title: 'Collaboration',
+      description:
+        'Collaboration is a core value of our team, promoting communication, cooperation, and collective problem-solving to achieve shared goals and foster innovation.',
+      image: collab,
+    },
+  ];
+
+  const teamMembers = [
+    {
+      names: 'Bonheur Iraguha',
+      role: 'CEO',
+      image: bonheur,
+      linkedin: 'https://www.linkedin.com/in/bonheur-iraguha-150894256/',
+    },
+    {
+      names: 'Fabrice Mukunzi',
+      role: 'CTO',
+      image: fab,
+      linkedin: 'https://www.linkedin.com/in/mukunzi-fabrice/',
+    },
+    {
+      names: 'Jeannette Uwanyirigira',
+      role: 'Marketing Manager',
+      image: jeanette,
+      linkedin: 'https://www.linkedin.com/in/jeannette-uwanyirigira-208319285/',
+    },
+    {
+      names: 'Paradis Ishimwe',
+      role: 'Software Developer',
+      image: paradis,
+      linkedin: 'https://www.linkedin.com/in/ishimwe-ami-paradis-14b34026a/',
+    },
+    {
+      names: 'Joseph Mugisha',
+      role: 'Software Developer',
+      image: mugisha,
+      linkedin: 'https://www.linkedin.com/in/mugisha-joseph-23087a261/',
+    },
+  ];
   return (
     <div className="w-">
-      <div className="flex justify-center items-center gap-10 w-full">
+      <div className="flex justify-between gap-20 w-full">
         <div className="w-1/2">
           <h1 className="text-primary font-semibold text-3xl">
             Experience the Future of Education with Posinnove
@@ -21,7 +91,15 @@ export default function AboutPage() {
             prepares learners for success in a rapidly evolving digital world.
           </p>
         </div>
-        <Image src={Image1} alt="Image" width={300} height={100} />
+        <div className="w-1/2">
+          <Image
+            className=" object-cover"
+            src={Image1}
+            alt="Image"
+            width={350}
+            height={100}
+          />
+        </div>
       </div>
       <div className="grid grid-cols-3 gap-6 my-10">
         {valuesArray.map((offer, i) => (
@@ -38,8 +116,8 @@ export default function AboutPage() {
           </Card>
         ))}
       </div>
-      <div className="flex justify-center items-center gap-32 w-full my-10 px-20">
-        <Image src={Image2} alt="Image" width={500} height={200} />
+      <div className="flex justify-center items-center gap-32 w-full my-10">
+        <Image className="" src={Image2} alt="Image" width={300} height={200} />
         <div className="w-1/2">
           <h1 className="text-primary font-semibold text-3xl">Our Story</h1>
           <p>
@@ -57,15 +135,67 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
-      <div>
-        {/* <p className="text-primary font-semibold text-3xl">Our Core Values</p>
-        <User
-          name="Ownership"
-          description="Ownership is a core value of our team, driving accountability, commitment, and a sense of responsibility for our collective goals and outcomes."
-          avatarProps={{
-            src: "@/public/home.png",
-          }}
-        /> */}
+      <div className="mx-20">
+        <p className="text-primary font-semibold text-3xl my-20">
+          Our Core Values
+        </p>
+        {coreValues.map((value, i) => (
+          <div
+            key={i}
+            className="flex my-8 gap-5 items-center border-2 border-[#B6B6B6] p-2 w-[100%] rounded-lg"
+          >
+            <Image className="w-14 mx-2" src={value.image} alt="logo" />
+            <div>
+              <h1 className="text-primary text-2xl font-semibold">
+                {value.title}
+              </h1>
+              <p>{value.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="text-primary text-center my-8 text-2xl font-semibold">
+        Leadership Team
+      </p>
+      <div className="mx-44 grid grid-cols-3 gap-4">
+        {teamMembers.map((member, i) => (
+          <Card
+            key={i}
+            isFooterBlurred
+            radius="lg"
+            className="border-none h-[15rem] w-[17rem]"
+          >
+            <Image
+              alt="Woman listing to music"
+              className="object-cover mx-auto"
+              height={300}
+              src={member.image}
+              width={300}
+            />
+            <CardFooter className="justify-between bg-primary before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+              <div>
+                <p className="my-1 text-base font-medium text-white">
+                  {member.names}
+                </p>
+                <p className="text-tiny my-1 font-medium text-white/80">
+                  {member.role}
+                </p>
+              </div>
+              <Button
+                href={member.linkedin}
+                as={Link}
+                target="_blank"
+                className="text-tiny text-white bg-black/20"
+                variant="flat"
+                color="default"
+                radius="lg"
+                size="sm"
+              >
+                <Linkedin size={20} />
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
       </div>
     </div>
   );

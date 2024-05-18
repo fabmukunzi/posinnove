@@ -16,8 +16,8 @@ const Faq = () => {
       </h1>
       <Accordion variant="splitted" className="flex justify-center flex-col items-center my-4">
         {questions.map((question, i) => (
-          <AccordionItem className="w-[100%]" aria-label={question.title} key={i} title={question.title}>
-            <p>{question.description}</p>
+          <AccordionItem className="w-[50rem]" aria-label={question.title} key={i} title={question.title}>
+            <p className='text-left'>{question.description}</p>
           </AccordionItem>
         ))}
       </Accordion>
