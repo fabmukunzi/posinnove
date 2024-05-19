@@ -3,58 +3,46 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   navItems: [
     {
-      label: 'Home',
-      href: '/',
+      label: 'Explore Program',
+      href: '/profile',
     },
     {
-      label: 'Docs',
-      href: '/docs',
+      label: 'What We Offer',
+      href: '/#whatWeoffer',
     },
     {
-      label: 'Pricing',
-      href: '/pricing',
+      label: 'About us',
+      href: '/about',
     },
     {
       label: 'Blog',
       href: '/blog',
     },
     {
-      label: 'About',
-      href: '/about',
+      label: 'FAQ',
+      href: '/#fqa',
     },
   ],
   navMenuItems: [
     {
-      label: 'Profile',
+      label: 'Explore Program',
       href: '/profile',
     },
     {
-      label: 'Dashboard',
-      href: '/dashboard',
+      label: 'What We Offer',
+      href: '/#whatWeoffer',
     },
     {
-      label: 'Projects',
-      href: '/projects',
+      label: 'About us',
+      href: '/about',
     },
     {
-      label: 'Team',
-      href: '/team',
+      label: 'Blog',
+      href: '/blog',
     },
     {
-      label: 'Calendar',
-      href: '/calendar',
-    },
-    {
-      label: 'Settings',
-      href: '/settings',
-    },
-    {
-      label: 'Help & Feedback',
-      href: '/help-feedback',
-    },
-    {
-      label: 'Logout',
-      href: '/logout',
+      label: 'FAQ',
+      href: '/#fqa',
     },
   ],
   links: {
