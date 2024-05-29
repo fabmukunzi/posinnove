@@ -6,7 +6,7 @@ import React from 'react';
 
 const Faq = () => {
   return (
-    <div id="faq" className="text-center py-3">
+    <div id="faq" className="text-center py-3 w-full">
       <h1 className="text-primary font-bold text-2xl">
         Frequent Asked Questions
       </h1>
@@ -16,7 +16,7 @@ const Faq = () => {
       </h1>
       <Accordion variant="splitted" className="flex justify-center flex-col items-center my-4">
         {questions.map((question, i) => (
-          <AccordionItem className="w-[50rem]" aria-label={question.title} key={i} title={question.title}>
+          <AccordionItem className="w-[50rem] max-sm:w-[20rem]" aria-label={question.title} key={i} title={question.title}>
             <p className='text-left'>{question.description}</p>
           </AccordionItem>
         ))}

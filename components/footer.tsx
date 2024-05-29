@@ -9,20 +9,20 @@ import Image from "next/image";
 function Footer() {
   return (
     <div className="bg-[#303950] w-full flex flex-col mt-10">
-      <div className="flex justify-around mx-[5%] mt-[5%] mb-[2%] text-white">
-        <div>
+      <div className="flex justify-around mx-[5%] mt-[5%] mb-[2%] text-white max-sm:flex-wrap">
+        <div className="max-sm:w-[1/2]">
           <h2 className="font-extrabold text-xl pb-4">Learn More</h2>
           <p><NextLink href='/about'> About us</NextLink></p>
           <p><NextLink href='/#whatWeoffer'>What We offer</NextLink></p>
           <p><NextLink href='/#'>Our Blogs</NextLink></p>
           <p><NextLink href='/#'>Our Offerings</NextLink></p>
         </div>
-        <div>
+        <div className="max-sm:w-[1/2]">
           <h2 className="font-extrabold text-xl pb-4">Get in Touch</h2>
           <p>Kigali, Rwanda</p>
           <p>posinnove@gmail.com</p>
         </div>
-        <div className="w-[24%]">
+        <div className="w-[24%] max-sm:w-full max-sm:mt-10">
           <h2 className="font-extrabold text-xl pb-4">Our Newsletter</h2>
           <p>
             Subscribe to our newsletter to get our news & deals delivered to
@@ -34,7 +34,7 @@ function Footer() {
               placeholder="Email address"
               className="p-2 bg-[#D9D9D9] outline-none rounded-xl rounded-r-none text-[#9E9E9E]"
             />
-            <Button className="bg-primary rounded-xl rounded-l-none px-10 text-white">
+            <Button className="bg-primary rounded-xl rounded-l-none px-20 text-white">
               Submit
             </Button>
           </div>

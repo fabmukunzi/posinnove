@@ -78,8 +78,8 @@ export default function AboutPage() {
   ];
   return (
     <div className="w-">
-      <div className="flex justify-between gap-20 w-full">
-        <div className="w-1/2">
+      <div className="flex justify-between max-sm:flex-col-reverse gap-20 max-sm:gap-10 w-full">
+        <div className="w-1/2 max-sm:w-full">
           <h1 className="text-primary font-semibold text-3xl">
             Experience the Future of Education with Posinnove
           </h1>
@@ -91,7 +91,7 @@ export default function AboutPage() {
             prepares learners for success in a rapidly evolving digital world.
           </p>
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2 max-sm:w-full">
           <Image
             className=" object-cover"
             src={Image1}
@@ -101,9 +101,9 @@ export default function AboutPage() {
           />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-6 my-10">
+      <div className="grid grid-cols-3 gap-6 my-10 max-sm:flex max-sm:flex-col">
         {valuesArray.map((offer, i) => (
-          <Card key={i} className="w-[80%]">
+          <Card key={i} className="w-[80%] max-sm:w-full">
             {/* <CardHeader className="flex justify-center">
               <Users size={80} color="#002278" fill="#002278" />
             </CardHeader> */}
@@ -116,9 +116,9 @@ export default function AboutPage() {
           </Card>
         ))}
       </div>
-      <div className="flex justify-center items-center gap-32 w-full my-10">
+      <div className="flex justify-center items-center gap-32 w-full my-10 max-sm:flex-col max-sm:gap-10">
         <Image className="" src={Image2} alt="Image" width={300} height={200} />
-        <div className="w-1/2">
+        <div className="w-1/2 max-sm:w-full">
           <h1 className="text-primary font-semibold text-3xl">Our Story</h1>
           <p>
             In Kigali, Rwanda, Bonheur, a driven student, observed the disparity
@@ -135,8 +135,8 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
-      <div className="mx-20">
-        <p className="text-primary font-semibold text-3xl my-20">
+      <div className="mx-20 max-sm:mx-0">
+        <p className="text-primary font-semibold text-3xl my-20 max-sm:text-center max-sm:my-0">
           Our Core Values
         </p>
         {coreValues.map((value, i) => (
@@ -157,18 +157,18 @@ export default function AboutPage() {
       <p className="text-primary text-center my-8 text-2xl font-semibold">
         Leadership Team
       </p>
-      <div className="mx-44 grid grid-cols-3 gap-4">
+      <div className="mx-44 grid grid-cols-3 gap-4 max-sm:mx-0 max-sm:justify-center max-sm:flex max-sm:flex-col">
         {teamMembers.map((member, i) => (
           <Card
             key={i}
             isFooterBlurred
             radius="lg"
-            className="border-none h-[15rem] w-[17rem]"
+            className="border-none h-[18rem] w-[17rem] max-sm:w-full max-sm:h-[18rem]"
           >
             <Image
               alt="Woman listing to music"
               className="object-cover mx-auto"
-              height={300}
+              height={330}
               src={member.image}
               width={300}
             />
