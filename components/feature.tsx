@@ -22,9 +22,9 @@ const Feature = () => {
         Take the follow projects according to your level and upskill your self
         through hands on project{" "}
       </h1>
-      <div className="grid grid-cols-4  gap-6 my-4 max-sm:flex max-sm:flex-col">
+      <div className="grid grid-cols-4 gap-6 my-4 max-sm:flex max-sm:flex-col">
         {projectArray.map((project, i) => (
-          <Card className="w-[290px]">
+          <Card key={i} className="w-[290px]">
             <CardHeader className="justify-between">
               <div className="flex gap-5">
                 <div className="flex flex-col gap-1 items-start justify-center">
@@ -35,13 +35,13 @@ const Feature = () => {
               </div>
               <Button
                 className={`${
-                  project.level == "Beginner"
+                  project.level === "Beginner"
                     ? "bg-[#A6D4FF]"
-                    : " " && project.level == "Intermediate"
+                    : project.level === "Intermediate"
                     ? "bg-[#fbff009c]"
-                    : " " && project.level == "Advanced"
+                    : project.level === "Advanced"
                     ? "bg-[#74FC82]"
-                    : " "
+                    : ""
                 } text-foreground border-default-200`}
                 color="primary"
                 radius="full"
@@ -55,7 +55,7 @@ const Feature = () => {
               <div className="flex items-center gap-1">
                 <Image src={project.icon} alt={project.title} />
                 <p className="font-semibold text-default-400 text-small">
-                  Offered buy
+                  Offered by
                 </p>
               </div>
               <div className="flex gap-1 items-center">
