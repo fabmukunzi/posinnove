@@ -1,21 +1,24 @@
+import crowd from '../public/Crowd.png'
+import combo from '../public/Combo Chart.png'
+import machine from '../public/Machine Learning.png'
 export const offersArray = [
   {
-    icon: 'UsersThree',
-    title: ' Collaborative features.',
+    icon: crowd,
+    title: ' Interactive Learning',
     description:
-      'Encourages collaboration with group projects, discussion forums, and real-time tools, allowing students to work together and engage with peers, educators, and mentors. Our platform cultivates teamwork and community, providing an inclusive environment for effective collaboration and student growth.',
+      'Engage in hands-on projects that bridge the gap between theory and practice.',
   },
   {
-    icon: 'UsersThree',
-    title: ' Practical Learning Experiences',
+    icon: machine,
+    title: ' Project Levels',
     description:
-      'A curated collection of educational resources, including articles, videos, and interactive materials, aligned with academic curricula to support comprehensive learning.',
+      'Choose from beginner, intermediate, and advanced projects tailored to your skill level.',
   },
   {
-    icon: 'UsersThree',
-    title: 'Data-Driven Insights',
+    icon: combo,
+    title: 'Career Opportunities',
     description:
-      'Analytics and performance tracking tools that provide actionable insights into student progress, enabling educators and parents to monitor growth and adapt teaching strategies accordingly.',
+      'omplete advanced projects and access our talent market to land your dream job.',
   },
 ];
 

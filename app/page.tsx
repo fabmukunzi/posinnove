@@ -11,10 +11,11 @@ import Image from 'next/image';
 import { Button } from '@nextui-org/button';
 import Offers from '@/components/offers';
 import Faq from '@/components/faq';
+import Feature from '@/components/feature';
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 px-0">
       <div className="flex justify-center gap-8">
         <h1 className="text-primary font-bold text-4xl">
           Revolutionize Education
@@ -38,6 +39,7 @@ export default function Home() {
 		<Image width={60} src={alxPic} alt="Alx" />
       </div>
 	  <Offers />
+    <Feature />
 	  <Faq />
     </section>
   );
