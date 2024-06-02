@@ -6,7 +6,7 @@ import posinnoveLogo from "@/public/posinnove.png"
 export const Logo: React.FC<IconSvgProps> = ({
 	...props
 }) => (
-	<Image width={80} height={50} src={posinnoveLogo} alt="logo" />
+	<Image width={50} height={30} src={posinnoveLogo} alt="logo" />
 );
 
 export const DiscordIcon: React.FC<IconSvgProps> = ({

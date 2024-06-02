@@ -13,6 +13,7 @@ import bonheur from '@/public/Bonheur.jpg';
 import fab from '@/public/fab.png';
 import jeanette from '@/public/jeannette.png';
 import paradis from '@/public/paradis.jpg';
+import agape from '@/public/agape.png';
 import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 export default function AboutPage() {
@@ -54,7 +55,7 @@ export default function AboutPage() {
     {
       names: 'Fabrice Mukunzi',
       role: 'CTO',
-      image: fab,
+      image: "https://res.cloudinary.com/dagurahkl/image/upload/v1698509499/xpu6s3rcfvdnvjrvnr61.png",
       linkedin: 'https://www.linkedin.com/in/mukunzi-fabrice/',
     },
     {
@@ -62,6 +63,12 @@ export default function AboutPage() {
       role: 'Marketing Manager',
       image: jeanette,
       linkedin: 'https://www.linkedin.com/in/jeannette-uwanyirigira-208319285/',
+    },
+    {
+      names: 'Agape Mugisha',
+      role: 'Analytics Lead',
+      image: agape,
+      linkedin: 'https://www.linkedin.com/in/agape-mugisha-b3a901253/',
     },
     {
       names: 'Paradis Ishimwe',
@@ -77,7 +84,7 @@ export default function AboutPage() {
     },
   ];
   return (
-    <div className="w-">
+    <div className="mt-20">
       <div className="flex justify-between max-sm:flex-col-reverse gap-20 max-sm:gap-10 w-full">
         <div className="w-1/2 max-sm:w-full">
           <h1 className="text-primary font-semibold text-3xl">
@@ -116,7 +123,7 @@ export default function AboutPage() {
           </Card>
         ))}
       </div>
-      <div className="flex justify-center items-center gap-32 w-full my-10 max-sm:flex-col max-sm:gap-10">
+      <div className="flex justify-center items-center max-sm:flex-col gap-32 w-full my-10 max-sm:gap-10">
         <Image className="" src={Image2} alt="Image" width={300} height={200} />
         <div className="w-1/2 max-sm:w-full">
           <h1 className="text-primary font-semibold text-3xl">Our Story</h1>
@@ -142,7 +149,7 @@ export default function AboutPage() {
         {coreValues.map((value, i) => (
           <div
             key={i}
-            className="flex my-8 gap-5 items-center border-2 border-[#B6B6B6] p-2 w-[100%] rounded-lg"
+            className="flex my-8 gap-5 items-center border border-[#B6B6B6] p-2 w-[100%] rounded-lg"
           >
             <Image className="w-14 mx-2" src={value.image} alt="logo" />
             <div>
@@ -157,7 +164,7 @@ export default function AboutPage() {
       <p className="text-primary text-center my-8 text-2xl font-semibold">
         Leadership Team
       </p>
-      <div className="mx-44 grid grid-cols-3 gap-4 max-sm:mx-0 max-sm:justify-center max-sm:flex max-sm:flex-col">
+      <div className="mx-44 grid grid-cols-3 gap-4 max-sm:mx-0 max-lg:mx-32 max-sm:justify-center max-sm:grid-cols-1 max-lg:grid-cols-2">
         {teamMembers.map((member, i) => (
           <Card
             key={i}

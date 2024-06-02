@@ -10,13 +10,13 @@ const Faq = () => {
       <h1 className="text-primary font-bold text-2xl">
         Frequent Asked Questions
       </h1>
-      <h1 className="my-2">
+      <h1 className="my-2 md:w-[60%] mx-auto text-center">
         Certainly! Here &apos; s a set of frequently asked questions (FAQs) on
         This platform to provide users with valuable information about Posinnove
       </h1>
-      <Accordion variant="splitted" className="flex justify-center flex-col items-center my-4">
+      <Accordion variant="splitted" selectionMode="multiple" defaultExpandedKeys={["0"]}  className="flex justify-center flex-col items-center my-4">
         {questions.map((question, i) => (
-          <AccordionItem className="w-[50rem] max-sm:w-[20rem]" aria-label={question.title} key={i} title={question.title}>
+          <AccordionItem className="w-[50rem] max-sm:w-[23rem]" aria-label={question.title} key={i} title={question.title}>
             <p className='text-left'>{question.description}</p>
           </AccordionItem>
         ))}

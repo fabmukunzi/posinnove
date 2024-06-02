@@ -1,5 +1,5 @@
 import Project from '@/types/project';
-import ur from '../public/ur.png';
+import ur from '../public/posinnove.png';
 import { StaticImageData } from 'next/image';
 
 export const projectArray: Project[] = [

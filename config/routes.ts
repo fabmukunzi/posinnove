@@ -1,11 +1,11 @@
 export const navItems = [
   {
     label: 'Explore Program',
-    href: '#',
+    href: './#',
   },
   {
     label: 'What We offer',
-    href: '#whatWeoffer',
+    href: './#whatWeoffer',
   },
   {
     label: 'About us',
@@ -13,10 +13,10 @@ export const navItems = [
   },
   {
     label: 'Blogs',
-    href: '#',
+    href: './#',
   },
   {
     label: 'FAQ',
-    href: '#faq',
+    href: './#faq',
   },
 ];

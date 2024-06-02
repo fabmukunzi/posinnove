@@ -18,7 +18,7 @@ export const offersArray = [
     icon: combo,
     title: 'Career Opportunities',
     description:
-      'omplete advanced projects and access our talent market to land your dream job.',
+      'Complete advanced projects and access our talent market to land your dream job.',
   },
 ];
 
