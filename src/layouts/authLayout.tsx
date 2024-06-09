@@ -21,12 +21,12 @@ const AuthLayout = ({ children }: Props) => {
         <Title level={3} className="font-semibold w-[70%] text-primary">
           {text.map((el, i) => (
             <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 2,
-                delay: i / 10,
-              }}
+              // initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              // transition={{
+              //   duration: 2,
+              //   delay: i / 5,
+              // }}
               key={i}
             >
               {el}{' '}
