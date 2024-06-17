@@ -17,18 +17,23 @@ const Home = () => {
       >
         We are coming soon
       </Title>
-      <Link href="https://posinnove.com/" target="_blank">
-        <Button type="primary" className="w-44 text-white border-none">
-          Landing Page
-        </Button>
-        <Link
-          href="https://dev.posinnove.com/login"
-          type="primary"
-          className="w-44 mx-10 bg-primary text-white border-none"
-        >
-          Login Page
+      <div className="flex gap-2">
+        <Link href="https://posinnove.com/" target="_blank">
+          <Button type="primary" className="w-44 text-white border-none">
+            Landing Page
+          </Button>
         </Link>
-      </Link>
+        <Link href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/login`} target="_blank">
+          <Button type="primary" className="w-44 text-white border-none">
+            Login Page
+          </Button>
+        </Link>
+        <Link href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup`} target="_blank">
+          <Button type="primary" className="w-44 text-white border-none">
+            Signup Page
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };

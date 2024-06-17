@@ -1,7 +1,16 @@
-import { useLoginMutation } from '@store/actions/auth';
 import { setToken } from '@store/reducers/app';
 import { logo } from '@utils/images';
-import { Button, Checkbox, Form, Input, Typography, notification, Dropdown, Space } from 'antd';
+import {
+  Button,
+  Checkbox,
+  Form,
+  Input,
+  Typography,
+  notification,
+  Dropdown,
+  Space,
+  Radio,
+} from 'antd';
 import { DownOutlined, UserOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import Image from 'next/image';
@@ -9,61 +18,30 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useSignupMutation } from '@store/actions/auth';
 
 const SignupComponent = () => {
   const { Title } = Typography;
-  const [login, { isLoading }] = useLoginMutation();
-  const [gender, setGender] = useState("Gender");
+  const [signup, { isLoading }] = useSignupMutation();
   const { push } = useRouter();
-  const dispatch = useDispatch();
-
-  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log('click left button', e);
-  };
-
-  const handleMenuClick: MenuProps['onClick'] = (e) => {
-    console.log('click', e.key);
-    if (e.key === '1') {
-      setGender("Male");
-    }
-    if (e.key === '2') {
-      setGender("Female");
-    }
-  };
-
-  const items: MenuProps['items'] = [
-    {
-      label: 'Male',
-      key: '1',
-      icon: <UserOutlined />,
-    },
-    {
-      label: 'Female',
-      key: '2',
-      icon: <UserOutlined />,
-    },
-  ];
-
-  const menuProps = {
-    items,
-    onClick: handleMenuClick,
-  };
 
   const handleLogin = async (values: any) => {
     try {
-      const { data } = await login(values).unwrap();
-      dispatch(setToken(data.token));
+      const { confirmPassword, ...signupValues } = values;
+      const { message } = await signup(signupValues).unwrap();
+      notification.success({
+        message,
+      });
       push('/');
     } catch (error: any) {
       notification.error({
         message: error.data.message,
       });
-      console.log(error, 'responseee');
     }
   };
 
   return (
-    <div className="flex flex-col items-center justify-center -mt-20 md:mt-0">
+    <div className="flex flex-col items-center justify-center mt-40 md:mt-0">
       <Image src={logo} alt="logo" className="md:hidden" />
       <Title level={2} className="text-primary font-semibold">
         Signup
@@ -87,45 +65,7 @@ const SignupComponent = () => {
         >
           <Input placeholder="Enter your email" />
         </Form.Item>
-        <div className="flex gap-3">
-          <Form.Item
-            name="password"
-            label="Password"
-            rules={[
-              {
-                required: true,
-                message: 'Please enter your password',
-              },
-              { min: 6, message: 'Password must be at least 6 characters' },
-            ]}
-          >
-            <Input.Password placeholder="Enter your password" />
-          </Form.Item>
-
-          <Form.Item
-            name="confirmPassword"
-            label="Confirm Password"
-            rules={[
-              {
-                required: true,
-                message: 'Please confirm your password',
-              },
-              { min: 6, message: 'Password must be at least 6 characters' },
-              ({ getFieldValue }) => ({
-                validator(_, value) {
-                  if (!value || getFieldValue('password') === value) {
-                    return Promise.resolve();
-                  }
-                  return Promise.reject(new Error('The two passwords do not match!'));
-                },
-              }),
-            ]}
-          >
-            <Input.Password placeholder="Confirm your password" />
-          </Form.Item>
-        </div>
-
-        <div className="flex gap-3">
+        <div className="flex flex-col md:flex-row gap-3">
           <Form.Item
             name="firstName"
             label="First Name"
@@ -153,18 +93,66 @@ const SignupComponent = () => {
             <Input placeholder="Enter your last name" />
           </Form.Item>
         </div>
+        <div className="flex flex-col md:flex-row gap-3">
+          <Form.Item
+            name="password"
+            label="Password"
+            rules={[
+              {
+                required: true,
+                message: 'Enter password',
+              },
+              { min: 6, message: 'Password must be at least 6 characters' },
+            ]}
+          >
+            <Input.Password placeholder="Enter your password" />
+          </Form.Item>
 
-        <Form.Item name="gender" label="Gender">
-          <Dropdown menu={menuProps}>
-            <Button>
-              <Space>
-                {gender}
-                <DownOutlined />
-              </Space>
-            </Button>
-          </Dropdown>
-        </Form.Item>
-
+          <Form.Item
+            name="confirmPassword"
+            label="Confirm Password"
+            rules={[
+              {
+                required: true,
+              },
+              ({ getFieldValue }) => ({
+                validator(_, value) {
+                  if (!value || getFieldValue('password') === value) {
+                    return Promise.resolve();
+                  }
+                  return Promise.reject(new Error("Passwords doesn't match!"));
+                },
+              }),
+            ]}
+          >
+            <Input.Password placeholder="Confirm password" />
+          </Form.Item>
+        </div>
+        <div className="flex">
+          <Form.Item
+            className="w-full"
+            initialValue="student"
+            label="Select Role"
+            name="role"
+          >
+            <Radio.Group size="small" buttonStyle="solid">
+              <Radio.Button value="student">Student</Radio.Button>
+              <Radio.Button value="teacher">Educator</Radio.Button>
+            </Radio.Group>
+          </Form.Item>
+          <Form.Item
+            className="w-full"
+            initialValue="male"
+            label="Select Gender"
+            name="gender"
+          >
+            <Radio.Group size="small" buttonStyle="solid">
+              <Radio.Button value="male">Male</Radio.Button>
+              <Radio.Button value="female">Female</Radio.Button>
+              <Radio.Button value="other">Other</Radio.Button>
+            </Radio.Group>
+          </Form.Item>
+        </div>
         <Button
           loading={isLoading}
           className="my-3"
@@ -176,9 +164,9 @@ const SignupComponent = () => {
         </Button>
         <Title
           level={5}
-          className="font-normal flex items-center justify-center gap-1"
+          className="font-normal flex flex-col md:flex-row items-center justify-center gap-1"
         >
-          I don’t have an account?{' '}
+          Already have an account?
           <Link href="/login" className="text-primary font-medium">
             Login
           </Link>
