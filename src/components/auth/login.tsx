@@ -19,10 +19,10 @@ const LoginComponent = () => {
       dispatch(setToken(data.token));
       push('/');
     } catch (error: any) {
+      console.log(error,"errrrrr");
       notification.error({
-        message: error.data.message,
+        message: error?.data?.message,
       });
-      console.log(error, 'responseee');
     }
   };
   return (

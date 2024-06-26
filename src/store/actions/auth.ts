@@ -3,7 +3,7 @@ import baseAPI from '@store/api';
 const userEndpoints = baseAPI.injectEndpoints({
   endpoints: (builder) => ({
     login: builder.mutation<any, any>({
-      query: (body) => ({
+      query: (body: any) => ({
         url: '/api/users/login',
         method: 'POST',
         body,
@@ -16,7 +16,13 @@ const userEndpoints = baseAPI.injectEndpoints({
         body,
       }),
     }),
+    getProfile: builder.query({
+      query: () => ({
+        url: '/api/users/profile',
+        method: 'GET'
+      }),
+    })
   }),
 });
 
-export const { useLoginMutation, useSignupMutation } = userEndpoints;
+export const { useLoginMutation, useSignupMutation, useGetProfileQuery } = userEndpoints;
