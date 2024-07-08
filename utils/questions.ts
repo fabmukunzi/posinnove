@@ -1,8 +1,8 @@
 export const questions = [
   {
-    title: 'What is posinnove',
+    title: 'What is posinnove?',
     description:
-      'Posinnove is a platform that connects students, educators, and organizations to collaborate on project-based learning experiences. Students gain practical skills, educators can integrate real-world projects into their curriculum, and organizations can find and train future talent.',
+      'Posinnove is the bridge between education and real-world digital skills. We connect students with businesses for project-based learning. Students gain experience, build portfolios, and increase their employability, while businesses access a talent pool and get project support.',
   },
   {
     title: 'What kind of projects can I find on Posinnove?',

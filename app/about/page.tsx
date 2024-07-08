@@ -48,13 +48,13 @@ export default function AboutPage() {
   const teamMembers = [
     {
       names: 'Bonheur Iraguha',
-      role: 'CEO',
+      role: 'Founder and CEO',
       image: bonheur,
       linkedin: 'https://www.linkedin.com/in/bonheur-iraguha-150894256/',
     },
     {
       names: 'Fabrice Mukunzi',
-      role: 'CTO',
+      role: 'CTO and Co-founder',
       image: "https://res.cloudinary.com/dagurahkl/image/upload/v1698509499/xpu6s3rcfvdnvjrvnr61.png",
       linkedin: 'https://www.linkedin.com/in/mukunzi-fabrice/',
     },

@@ -14,6 +14,9 @@ import Faq from '@/components/faq';
 import Feature from '@/components/feature';
 import Getstarted from '@/public/login.png';
 import students from '@/public/students.svg';
+import org from '@/public/org.svg';
+import edu from "@/public/educator.svg"
+import ictchamber from "@/public/ictchamber.jpg"
 
 export default function Home() {
   return (
@@ -37,8 +40,11 @@ export default function Home() {
       </div>
 
       <div className="mt-8 flex flex-col items-center gap-4 justify-center">
-        <h1 className="text-primary font-bold text-2xl">Backed by</h1>
-        <Image width={60} src={alxPic} alt="Alx" />
+        <h1 className="text-primary font-bold md:text-2xl">We are grateful for the support from:</h1>
+        <div className='flex gap-4 my-10 mx-auto'>
+        <Image width={120} src={alxPic} className='object-fill !h-20' alt="Alx" />
+        <Image width={200} src={ictchamber} className='object-cover !h-20' alt="Ict chamber" />
+        </div>
       </div>
       <Offers />
       <Feature />
@@ -72,10 +78,10 @@ export default function Home() {
               hire skilled individuals.
             </p>
           </div>
-          <Image className="w-72" src={students} alt="Students" />
+          <Image className="w-72" src={org} alt="Students" />
         </div>
         <div className="flex md:gap-20 items-center justify-center max-sm:flex-col-reverse">
-          <Image className="w-72" src={students} alt="Students" />
+          <Image className="w-72" src={edu} alt="Students" />
           <div className="md:-mt-10 md:w-[40%]">
             <h1 className="text-2xl text-primary my-2 font-semibold">
               For Educators
