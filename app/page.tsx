@@ -15,8 +15,8 @@ import Feature from '@/components/feature';
 import Getstarted from '@/public/login.png';
 import students from '@/public/students.svg';
 import org from '@/public/org.svg';
-import edu from "@/public/educator.svg"
-import ictchamber from "@/public/ictchamber.jpg"
+import edu from '@/public/educator.svg';
+import ictchamber from '@/public/ictchamber.jpg';
 
 export default function Home() {
   return (
@@ -32,6 +32,11 @@ export default function Home() {
         between theoretical knowledge and real-world application.
       </h1>
       <div className="flex gap-3 mt-6">
+        <Link isExternal href="https://form.jotform.com/241956791680570">
+          <Button className="bg-primary rounded-full px-10 text-white">
+            Join as organization
+          </Button>
+        </Link>
         <Link isExternal href="https://dev.posinnove.com/login">
           <Button className="bg-primary rounded-full px-10 text-white">
             Get started
@@ -40,10 +45,22 @@ export default function Home() {
       </div>
 
       <div className="mt-8 flex flex-col items-center gap-4 justify-center">
-        <h1 className="text-primary font-bold md:text-2xl">We are grateful for the support from:</h1>
-        <div className='flex gap-4 my-10 mx-auto'>
-        <Image width={120} src={alxPic} className='object-fill !h-20' alt="Alx" />
-        <Image width={200} src={ictchamber} className='object-cover !h-20' alt="Ict chamber" />
+        <h1 className="text-primary font-bold md:text-2xl">
+          We are grateful for the support from:
+        </h1>
+        <div className="flex gap-4 my-10 mx-auto">
+          <Image
+            width={120}
+            src={alxPic}
+            className="object-fill !h-20"
+            alt="Alx"
+          />
+          <Image
+            width={200}
+            src={ictchamber}
+            className="object-cover !h-20"
+            alt="Ict chamber"
+          />
         </div>
       </div>
       <Offers />
@@ -55,7 +72,7 @@ export default function Home() {
         How the Sustainable Urban Garden Design Project Benefits Students and
         Others
       </h1>
-      <div className='max-sm:text-center'>
+      <div className="max-sm:text-center">
         <div className="flex md:gap-20 items-center justify-center max-sm:flex-col-reverse">
           <Image className="w-72" src={students} alt="Students" />
           <div className="md:-mt-10 md:w-[40%]">
