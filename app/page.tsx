@@ -17,6 +17,7 @@ import students from '@/public/students.svg';
 import org from '@/public/org.svg';
 import edu from '@/public/educator.svg';
 import ictchamber from '@/public/ictchamber.jpg';
+import sandtech from '@/public/sandtech.jpg'
 
 export default function Home() {
   return (
@@ -48,7 +49,13 @@ export default function Home() {
         <h1 className="text-primary font-bold md:text-2xl">
           We are grateful for the support from:
         </h1>
-        <div className="flex gap-4 my-10 mx-auto">
+        <div className="flex gap-7 my-10 mx-auto">
+        <Image
+            width={120}
+            src={sandtech}
+            className="object-cover !h-20"
+            alt="Sandtech"
+          />
           <Image
             width={120}
             src={alxPic}
