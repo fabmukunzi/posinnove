@@ -39,6 +39,9 @@ function Footer() {
 						<li className="hover:underline">
 							<NextLink href="/terms">Terms and Conditions</NextLink>
 						</li>
+						<li className="hover:underline">
+							<NextLink href="/terms/privacy">Privacy and Policy</NextLink>
+						</li>
 					</ul>
 				</div>
 				<div className="w-[24%] max-sm:w-full max-sm:mt-10">
