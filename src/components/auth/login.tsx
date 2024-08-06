@@ -9,10 +9,13 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 const LoginComponent = () => {
+
+
   const { Title } = Typography;
   const [login, { isLoading }] = useLoginMutation();
   const { push } = useRouter();
   const dispatch = useDispatch();
+  
   const handleLogin = async (values: any) => {
     try {
       const { data } = await login(values).unwrap();
@@ -25,6 +28,10 @@ const LoginComponent = () => {
       });
     }
   };
+
+
+
+
   return (
     <div className="flex flex-col items-center justify-center -mt-20 md:mt-0">
       <Image src={logo} alt="logo" className="md:hidden" />
@@ -65,7 +72,7 @@ const LoginComponent = () => {
           <Form.Item name="remember" className="flex items-start my-0">
             <Checkbox>Remember Me</Checkbox>
           </Form.Item>
-          <Link href="/forgot-password" className="text-primary">
+          <Link href="/Forgot-Password" className="text-primary">
             Forgot Password?
           </Link>
         </div>
