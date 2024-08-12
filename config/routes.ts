@@ -4,8 +4,8 @@ export const navItems = [
     href: './#',
   },
   {
-    label: 'What We offer',
-    href: './#whatWeoffer',
+    label: 'Learners',
+    href: '/learners',
   },
   {
     label: 'About us',

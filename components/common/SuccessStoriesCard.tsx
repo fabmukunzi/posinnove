@@ -1,3 +1,4 @@
+import { Image } from "antd";
 import React from "react";
 
 interface SuccessStoriesCardProps {
@@ -19,7 +20,7 @@ const SuccessStoriesCard = ({
 		<div className="px-5 py-5 _shadow rounded-xl space-y-5 pb-12">
 			<div className="flex space-x-5">
 				<div>
-					<img src={image} alt={altText} />
+					<Image preview={false} src={image} alt={altText} />
 				</div>
 				<div>
 					<h1 className="text-primary text-xl font-semibold">{fullName}</h1>
@@ -27,7 +28,7 @@ const SuccessStoriesCard = ({
 				</div>
 			</div>
 			<div className="text-sm">
-				<p className="sm:text-2xl lg:text-xs">{description}</p>
+				<p className="sm:text-2xl lg:text-base">{description}</p>
 			</div>
 		</div>
 	);

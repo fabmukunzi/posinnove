@@ -1,5 +1,5 @@
+import { Button } from "antd";
 import React from "react";
-import CommonButton from "./common/CommonButton";
 
 const QuantitiesEmployerSeek = () => {
 	return (
@@ -12,30 +12,30 @@ const QuantitiesEmployerSeek = () => {
 					How Posinnove Can Help
 				</h1>
 				<ul className=" list-disc space-y-5 sm:text-2xl px-10">
-					<li>
-						<b>Critical Thinking:</b>Through real-world projects, students
+					<li className="text-lg">
+						<b>Critical Thinking: </b>Through real-world projects, students
 						develop problem-solving and decision-making skills.
 					</li>
-					<li>
-						<b>Adaptability:</b>Exposure to various projects and scenarios helps
+					<li className="text-lg">
+						<b>Adaptability: </b>Exposure to various projects and scenarios helps
 						students become flexible and resilient.
 					</li>
-					<li>
-						<b>Computer Literacy:</b>Digital learning modules and tools enhance
+					<li className="text-lg">
+						<b>Computer Literacy: </b>Digital learning modules and tools enhance
 						students' proficiency in technology.
 					</li>
-					<li>
-						<b>Teamwork:</b>Collaborative projects and community interactions
+					<li className="text-lg">
+						<b>Teamwork: </b>Collaborative projects and community interactions
 						build teamwork skills.
 					</li>
-					<li>
-						<b>Communication:</b> Regular feedback, mentorship, and peer
+					<li className="text-lg">
+						<b>Communication: </b> Regular feedback, mentorship, and peer
 						interactions improve communication abilities.
 					</li>
 				</ul>
-				<div className="flex items-center justify-center pt-10">
-					<CommonButton title="Get started" />
-				</div>
+				{/* <div className="flex items-center justify-center pt-10">
+					<Button title="Get started" />
+				</div> */}
 			</div>
 		</div>
 	);
