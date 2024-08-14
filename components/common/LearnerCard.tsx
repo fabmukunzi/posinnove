@@ -5,7 +5,6 @@ interface LearnerCardProps {
 	image: string;
 	description: string;
 	altText: string;
-	separate?: string;
 }
 
 const LearnerCard = ({
@@ -13,13 +12,10 @@ const LearnerCard = ({
 	image,
 	description,
 	altText,
-	separate,
 }: LearnerCardProps) => {
 	return (
 		<div
-			className={`flex flex-col space-y-6 px-4 ${
-				separate ? "bg-[#b0d9ff]" : "bg-[#d3eaff]"
-			} items-center rounded-xl pb-5 h-80 lg:h-80 sm:h-96`}
+			className={`flex flex-col space-y-6 px-4 bg-[#d3eaff] hover:bg-[#b0d9ff] _scale cursor-pointer items-center rounded-xl pb-5 h-80 lg:h-80 sm:h-96`}
 		>
 			<div className="w-24 h-24">
 				<img
