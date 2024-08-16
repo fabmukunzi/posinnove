@@ -10,10 +10,10 @@ import accountability from '@/public/account.svg';
 import team from '@/public/Onboarding.png';
 import mugisha from '@/public/mugisha.jpg';
 import bonheur from '@/public/Bonheur.jpg';
-import fab from '@/public/fab.png';
+import fab from '@/public/fab.jpg';
 import jeanette from '@/public/jeannette.png';
 import paradis from '@/public/paradis.jpg';
-import agape from '@/public/agape.png';
+import byuma from '@/public/byuma.jpg';
 import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 export default function AboutPage() {
@@ -55,7 +55,7 @@ export default function AboutPage() {
     {
       names: 'Fabrice Mukunzi',
       role: 'CTO and Co-founder',
-      image: "https://res.cloudinary.com/dagurahkl/image/upload/v1698509499/xpu6s3rcfvdnvjrvnr61.png",
+      image: fab,
       linkedin: 'https://www.linkedin.com/in/mukunzi-fabrice/',
     },
     {
@@ -65,10 +65,10 @@ export default function AboutPage() {
       linkedin: 'https://www.linkedin.com/in/jeannette-uwanyirigira-208319285/',
     },
     {
-      names: 'Agape Mugisha',
-      role: 'Analytics Lead',
-      image: agape,
-      linkedin: 'https://www.linkedin.com/in/agape-mugisha-b3a901253/',
+      names: 'Byuma G Lewis',
+      role: 'Product Designer',
+      image: byuma,
+      linkedin: 'https://www.linkedin.com/in/gatete-byuma-lewis-551067197/',
     },
     {
       names: 'Paradis Ishimwe',
@@ -100,10 +100,10 @@ export default function AboutPage() {
         </div>
         <div className="w-1/2 max-sm:w-full">
           <Image
-            className=" object-cover"
+            className="scale-150 object-cover"
             src={Image1}
             alt="Image"
-            width={350}
+            width={450}
             height={100}
           />
         </div>
