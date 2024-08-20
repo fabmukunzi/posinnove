@@ -6,7 +6,6 @@ type GuidanceDataTypes = {
 	title: string;
 	description: string;
 	altText: string;
-	separate: string;
 };
 
 const Guidance = () => {
@@ -16,7 +15,6 @@ const Guidance = () => {
 		description:
 			"Receive guidance from experienced educators and industry mentors. Get personalized feedback to improve your skills and knowledge.",
 		altText: "mentor_guidance",
-		separate: "colore",
 	};
 	return (
 		<div>
@@ -25,7 +23,6 @@ const Guidance = () => {
 				title={guidanceData.title}
 				description={guidanceData.description}
 				altText={guidanceData.altText}
-				separate={guidanceData.separate}
 			/>
 		</div>
 	);
