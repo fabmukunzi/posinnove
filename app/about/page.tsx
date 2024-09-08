@@ -1,8 +1,7 @@
-import Image from 'next/image';
 import Image1 from '@/public/image 6.png';
 import Image2 from '@/public/image 4.png';
 import { valuesArray } from '@/utils/offers';
-import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
+import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 import { Button, User } from '@nextui-org/react';
 import home1 from '@/public/home.png';
 import collab from '@/public/collab.svg';
@@ -48,7 +47,7 @@ export default function AboutPage() {
   const teamMembers = [
     {
       names: 'Bonheur Iraguha',
-      role: 'Founder and CEO',
+      role: 'CEO and Co-founder',
       image: bonheur,
       linkedin: 'https://www.linkedin.com/in/bonheur-iraguha-150894256/',
     },
@@ -100,11 +99,11 @@ export default function AboutPage() {
         </div>
         <div className="w-1/2 max-sm:w-full">
           <Image
-            className="scale-150 object-cover"
-            src={Image1}
+            className="object-cover"
+            src={Image1.src}
             alt="Image"
             width={450}
-            height={100}
+            height={300}
           />
         </div>
       </div>
@@ -124,7 +123,7 @@ export default function AboutPage() {
         ))}
       </div>
       <div className="flex justify-center items-center max-sm:flex-col gap-32 w-full my-10 max-sm:gap-10">
-        <Image className="" src={Image2} alt="Image" width={300} height={200} />
+        <Image className="" src={Image2.src} alt="Image" width={300} height={200} />
         <div className="w-1/2 max-sm:w-full">
           <h1 className="text-primary font-semibold text-3xl">Our Story</h1>
           <p>
@@ -151,7 +150,7 @@ export default function AboutPage() {
             key={i}
             className="flex my-8 gap-5 items-center border border-[#B6B6B6] p-2 w-[100%] rounded-lg"
           >
-            <Image className="w-14 mx-2" src={value.image} alt="logo" />
+            <Image className="w-14 mx-2" src={value.image.src} alt="logo" />
             <div>
               <h1 className="text-primary text-2xl font-semibold">
                 {value.title}
@@ -173,10 +172,10 @@ export default function AboutPage() {
             className="border-none h-[18rem] w-[17rem] max-sm:w-full max-sm:h-[18rem]"
           >
             <Image
-              alt="Woman listing to music"
-              className="object-cover mx-auto"
+              alt="Team member"
+              className=" object-cover mx-auto"
               height={330}
-              src={member.image}
+              src={member.image.src}
               width={300}
             />
             <CardFooter className="justify-between bg-primary before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
