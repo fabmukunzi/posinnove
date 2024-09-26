@@ -52,7 +52,7 @@ export const Navbar = () => {
       >
         <NavbarItem className="hidden md:flex">
           <Link isExternal href="https://dev.posinnove.com/login">
-            <Button className="rounded-full px-10 text-primary">
+            <Button size='lg' className="px-10 text-primary">
               Get started
             </Button>
           </Link>

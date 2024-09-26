@@ -6,7 +6,7 @@ const HighlightCard = () => {
 	return (
 		<div className="mt-14 lg:mt-24">
 			<div className="flex flex-col">
-				<h1 className="text-xl font-bold md:text-2xl lg:text-4xl text-primary text-center">
+				<h1 className="text-lg font-bold md:text-xl lg:text-2xl text-primary text-center">
 					Program Highlights
 				</h1>
 				<div className="flex items-center justify-between mt-4 lg:mt-10 lg:flex-row flex-col">
