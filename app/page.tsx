@@ -32,14 +32,14 @@ export default function Home() {
         Engage in hands-on, project-based learning designed to bridge the gap
         between theoretical knowledge and real-world application.
       </h1>
-      <div className="flex gap-3 mt-6">
+      <div className="flex gap-10 mt-6">
         <Link isExternal href="https://form.jotform.com/241956791680570">
-          <Button className="bg-primary rounded-full px-10 text-white">
+          <Button size='lg' className="bg-primary px-10 text-white">
             Join as organization
           </Button>
         </Link>
         <Link isExternal href="https://dev.posinnove.com/login">
-          <Button className="bg-primary rounded-full px-10 text-white">
+          <Button size='lg' className="bg-primary px-10 text-white">
             Get started
           </Button>
         </Link>
@@ -134,7 +134,7 @@ export default function Home() {
           </h1>
           <div className="flex max-sm:justify-center gap-3 mt-6">
             <Link isExternal href="https://dev.posinnove.com/login">
-              <Button className="bg-primary rounded-full px-10 text-white">
+              <Button  size='lg' className="bg-primary px-10 text-white">
                 Get started
               </Button>
             </Link>
