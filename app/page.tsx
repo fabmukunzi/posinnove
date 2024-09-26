@@ -1,11 +1,4 @@
 import { Link } from '@nextui-org/link';
-import { Snippet } from '@nextui-org/snippet';
-import { Code } from '@nextui-org/code';
-import { button as buttonStyles } from '@nextui-org/theme';
-import { siteConfig } from '@/config/site';
-import { title, subtitle } from '@/components/primitives';
-import { GithubIcon } from '@/components/icons';
-import onboardPic from '@/public/Onboarding.png';
 import alxPic from '@/public/alx.png';
 import Image from 'next/image';
 import { Button } from '@nextui-org/button';
@@ -26,13 +19,12 @@ export default function Home() {
         <h1 className="text-primary font-bold md:text-4xl text-2xl text-center">
           Work based learning platform
         </h1>
-        {/* <Image width={60} src={onboardPic} alt="Onboard" /> */}
       </div>
       <h1 className="md:w-[50%] text-center">
         Engage in hands-on, project-based learning designed to bridge the gap
         between theoretical knowledge and real-world application.
       </h1>
-      <div className="flex gap-10 mt-6">
+      <div className="flex gap-2 md:gap-10 mt-6">
         <Link isExternal href="https://form.jotform.com/241956791680570">
           <Button size='lg' className="bg-primary px-10 text-white">
             Join as organization
