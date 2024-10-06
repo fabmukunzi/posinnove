@@ -6,7 +6,7 @@ const DeadLine = () => {
     <div className="mt-14 lg:mt-24">
       <div className="flex flex-col gap-2">
         <h1 className="text-base italic md:text-xl font-semibold">
-          Application Deadline: 04/10/2024
+          Application Deadline: 11/10/2024
         </h1>
         <h1 className="font-semibold text-base lg:text-xl">
           Don’t miss this opportunity to gain experience and position yourself
