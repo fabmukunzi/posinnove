@@ -136,8 +136,8 @@ const SignupComponent = () => {
             name="role"
           >
             <Radio.Group size="small" buttonStyle="solid">
-              <Radio.Button value="student">Student</Radio.Button>
-              <Radio.Button value="teacher">Educator</Radio.Button>
+            <Radio.Button value="learner">Student</Radio.Button>
+            <Radio.Button value="instructor">Educator</Radio.Button>
             </Radio.Group>
           </Form.Item>
           <Form.Item
