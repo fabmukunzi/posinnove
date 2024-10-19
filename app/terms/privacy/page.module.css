@@ -1,0 +1,24 @@
+.list li {
+	list-style-type: disc;
+	margin-left: 25px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.list li ul li {
+	list-style-type: circle;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.title {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.secondList li {
+	list-style-type: disc;
+	margin-left: 25px;
+	font-size: 15px;
+	font-weight: normal;
+}
