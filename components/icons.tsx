@@ -1,12 +1,12 @@
 import * as React from "react";
 import { IconSvgProps } from "@/types";
 import Image from "next/image";
-import posinnoveLogo from "@/public/posinnove.png"
+import logo from "@/public/logo-posinnove.png";
 
 export const Logo: React.FC<IconSvgProps> = ({
 	...props
 }) => (
-	<Image width={50} height={30} src={posinnoveLogo} alt="logo" />
+	<Image height={40} src={logo} alt="logo" />
 );
 
 export const DiscordIcon: React.FC<IconSvgProps> = ({

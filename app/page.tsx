@@ -11,38 +11,18 @@ import org from '@/public/org.svg';
 import edu from '@/public/educator.svg';
 import ictchamber from '@/public/ictchamber.jpg';
 import sandtech from '@/public/sandtech.jpg'
+import Hero from '@/components/heroSection/hero';
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 px-0">
-      <div className="flex justify-center gap-8">
-        <h1 className="text-primary font-bold md:text-4xl text-2xl text-center">
-          Work based learning platform
-        </h1>
-      </div>
-      <h1 className="md:w-[50%] text-center">
-        Engage in hands-on, project-based learning designed to bridge the gap
-        between theoretical knowledge and real-world application.
-      </h1>
-      <div className="flex gap-2 md:gap-10 mt-6">
-        <Link isExternal href="https://form.jotform.com/241956791680570">
-          <Button size='lg' className="bg-primary px-10 text-white">
-            Join as organization
-          </Button>
-        </Link>
-        <Link isExternal href="https://dev.posinnove.com/login">
-          <Button size='lg' className="bg-primary px-10 text-white">
-            Get started
-          </Button>
-        </Link>
-      </div>
-
-      <div className="mt-8 flex flex-col items-center gap-4 justify-center">
-        <h1 className="text-primary font-bold md:text-2xl">
+    <section className="flex flex-col items-center justify-center gap-4 px-0 py-8 md:py-10">
+      <Hero />
+      <div className="flex flex-col items-center justify-center gap-4 mt-8">
+        <h1 className="font-bold text-primary md:text-2xl">
           We are grateful for the support from:
         </h1>
-        <div className="flex gap-7 my-10 mx-auto">
-        <Image
+        <div className="flex mx-auto my-10 gap-7">
+          <Image
             width={120}
             src={sandtech}
             className="object-cover !h-20"
@@ -64,7 +44,7 @@ export default function Home() {
       </div>
       <Offers />
       <Feature />
-      <h1 className="text-primary font-bold text-2xl text-center">
+      <h1 className="text-2xl font-bold text-center text-primary">
         Who is going to benefit and how?
       </h1>
       <h1 className="mb-8 text-center">
@@ -72,10 +52,10 @@ export default function Home() {
         Others
       </h1>
       <div className="max-sm:text-center">
-        <div className="flex md:gap-20 items-center justify-center max-sm:flex-col-reverse">
+        <div className="flex items-center justify-center md:gap-20 max-sm:flex-col-reverse">
           <Image className="w-72" src={students} alt="Students" />
           <div className="md:-mt-10 md:w-[40%]">
-            <h1 className="text-2xl text-primary my-2 font-semibold">
+            <h1 className="my-2 text-2xl font-semibold text-primary">
               For students
             </h1>
             <p>
@@ -84,9 +64,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex md:gap-20 items-center justify-center max-sm:flex-col">
+        <div className="flex items-center justify-center md:gap-20 max-sm:flex-col">
           <div className="md:-mt-10 md:w-[40%]">
-            <h1 className="text-2xl text-primary my-2 font-semibold">
+            <h1 className="my-2 text-2xl font-semibold text-primary">
               For Organizations
             </h1>
             <p>
@@ -96,10 +76,10 @@ export default function Home() {
           </div>
           <Image className="w-72" src={org} alt="Students" />
         </div>
-        <div className="flex md:gap-20 items-center justify-center max-sm:flex-col-reverse">
+        <div className="flex items-center justify-center md:gap-20 max-sm:flex-col-reverse">
           <Image className="w-72" src={edu} alt="Students" />
           <div className="md:-mt-10 md:w-[40%]">
-            <h1 className="text-2xl text-primary my-2 font-semibold">
+            <h1 className="my-2 text-2xl font-semibold text-primary">
               For Educators
             </h1>
             <p>
@@ -109,7 +89,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <h1 className="text-2xl text-primary my-4 font-bold">How It Works</h1>
+      <h1 className="my-4 text-2xl font-bold text-primary">How It Works</h1>
       <div className="flex max-sm:w-[95%] max-sm:flex-col gap-16 my-4 items-center justify-center">
         <div className="md:w-[25rem] h-60 rounded-md flex justify-center items-center bg-primary/20 p-5">
           <Image
@@ -119,14 +99,14 @@ export default function Home() {
           />
         </div>
         <div className="md:w-[40%] -mt-3">
-          <h1 className=" font-normal">
+          <h1 className="font-normal ">
             Step-by-Step Guide:
             <br /> Sign up, choose your project level, start learning, complete
             projects, and access talent market.
           </h1>
-          <div className="flex max-sm:justify-center gap-3 mt-6">
+          <div className="flex gap-3 mt-6 max-sm:justify-center">
             <Link isExternal href="https://dev.posinnove.com/login">
-              <Button  size='lg' className="bg-primary px-10 text-white">
+              <Button size='lg' className="px-10 text-white bg-primary">
                 Get started
               </Button>
             </Link>
