@@ -23,13 +23,13 @@ export const Navbar = () => {
     <NextUINavbar maxWidth="xl" className='fixed'>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          <NextLink className="flex items-center justify-start gap-1" href="/">
             <Logo />
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent>
-        <ul className="hidden lg:flex gap-16 justify-start ml-2">
+        <ul className="justify-start hidden gap-16 ml-2 lg:flex">
           {navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -58,13 +58,12 @@ export const Navbar = () => {
           </Link>
         </NavbarItem>
       </NavbarContent>
-
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+      <NavbarContent className="pl-4 sm:hidden basis-1" justify="end">
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+        <div className="flex flex-col gap-2 mx-4 mt-2">
           {navItems.map((item, index) => (
             <NavbarMenuItem key={`${item.href}-${index}`}>
               <NextLink
@@ -81,7 +80,7 @@ export const Navbar = () => {
           ))}
           <NavbarMenuItem>
             <Link isExternal href="https://dev.posinnove.com/login">
-              <Button className="rounded-full px-10 text-primary">
+              <Button className="px-10 rounded-full text-primary">
                 Get started
               </Button>
             </Link>

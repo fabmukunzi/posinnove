@@ -17,31 +17,6 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 px-0 py-8 md:py-10">
       <Hero />
-      <div className="flex flex-col items-center justify-center gap-4 mt-8">
-        <h1 className="font-bold text-primary md:text-2xl">
-          We are grateful for the support from:
-        </h1>
-        <div className="flex mx-auto my-10 gap-7">
-          <Image
-            width={120}
-            src={sandtech}
-            className="object-cover !h-20"
-            alt="Sandtech"
-          />
-          <Image
-            width={120}
-            src={alxPic}
-            className="object-fill !h-20"
-            alt="Alx"
-          />
-          <Image
-            width={200}
-            src={ictchamber}
-            className="object-cover !h-20"
-            alt="Ict chamber"
-          />
-        </div>
-      </div>
       <Offers />
       <Feature />
       <h1 className="text-2xl font-bold text-center text-primary">
