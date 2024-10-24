@@ -7,7 +7,7 @@ export const Line = (props:any) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width={400}
+            width={460}
             height={13}
             fill="none"
             {...props}

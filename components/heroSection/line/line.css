@@ -5,7 +5,7 @@
 }
 
 .line-animation .svg-line {
-  stroke-dasharray: 500; /* The total length of the path */
-  stroke-dashoffset: 500; /* Initially hide the line */
-  animation: drawLine 2s forwards ease-in-out; /* Animate over 2 seconds */
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: drawLine 2s forwards ease-in-out;
 }
