@@ -2,7 +2,7 @@ export const terms = [
 	{
 		title: "Eligibility",
 		description:
-			"You must be at least 18 years old and have the legal capacity to enter into contracts to use the Services. Users under 18 must have parental consent. You may not use the Services if you are prohibited from doing so by applicable law.",
+			"Posinnove programs are open to all individuals with a passion for learning and self-improvement in technology and project-based education. Participants must provide accurate and up-to-date information during registration to ensure proper program matching.",
 	},
 	{
 		title: "User Accounts",
