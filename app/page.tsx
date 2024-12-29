@@ -80,7 +80,7 @@ export default function Home() {
             projects, and access talent market.
           </h1>
           <div className="flex gap-3 mt-6 max-sm:justify-center">
-            <Link isExternal href="https://dev.posinnove.com/login">
+            <Link isExternal href="https://app.posinnove.com/login">
               <Button size='lg' className="px-10 text-white bg-primary">
                 Get started
               </Button>

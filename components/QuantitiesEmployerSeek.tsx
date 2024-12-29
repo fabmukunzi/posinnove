@@ -36,7 +36,7 @@ const QuantitiesEmployerSeek = () => {
 				</ul>
 				<div className="flex items-center justify-center pt-10">
 					<Button className="bg-primary rounded-full hover:!bg-primary/90 hover:!text-white h-10 px-8 text-white">
-						<NextLink href={"https://dev.posinnove.com/"}>Get started</NextLink>
+						<NextLink href={"https://app.posinnove.com/"}>Get started</NextLink>
 					</Button>
 				</div>
 			</div>
