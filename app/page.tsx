@@ -9,16 +9,16 @@ import Getstarted from '@/public/login.png';
 import students from '@/public/students.svg';
 import org from '@/public/org.svg';
 import edu from '@/public/educator.svg';
-import ictchamber from '@/public/ictchamber.jpg';
-import sandtech from '@/public/sandtech.jpg'
 import Hero from '@/components/heroSection/hero';
+import { AnimatedTestimonials } from '@/components/common/Testimonials';
+import { testimonials } from '@/utils/testimonials';
 
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 px-0 py-8 md:py-10">
       <Hero />
       <Offers />
-      <Feature />
+      {/* <Feature /> */}
       <h1 className="text-2xl font-bold text-center text-primary">
         Who is going to benefit and how?
       </h1>
@@ -89,6 +89,10 @@ export default function Home() {
         </div>
       </div>
       <Faq />
+      <h1 className="text-2xl font-bold text-center text-primary">
+      What People Are Saying?
+      </h1>
+      <AnimatedTestimonials testimonials={testimonials} />
     </section>
   );
 }
