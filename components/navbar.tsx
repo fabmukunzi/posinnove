@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -6,21 +8,30 @@ import {
   NavbarBrand,
   NavbarItem,
   NavbarMenuItem,
-} from '@nextui-org/navbar';
-import { Button } from '@nextui-org/button';
-import { Link } from '@nextui-org/link';
+  Button,
+  Link
+} from '@nextui-org/react';
 import { link as linkStyles } from '@nextui-org/theme';
-
-import { siteConfig } from '@/config/site';
 import NextLink from 'next/link';
 import clsx from 'clsx';
+import { useState } from 'react';
 
 import { Logo } from '@/components/icons';
 import { navItems } from '@/config/routes';
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <NextUINavbar maxWidth="xl" className='fixed'>
+    <NextUINavbar maxWidth="xl" className="fixed" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex items-center justify-start gap-1" href="/">
@@ -52,7 +63,7 @@ export const Navbar = () => {
       >
         <NavbarItem className="hidden md:flex">
           <Link isExternal href="https://dev.posinnove.com/login">
-            <Button size='lg' className="px-10 text-primary">
+            <Button size="lg" className="px-10 text-primary">
               Get started
             </Button>
           </Link>
@@ -67,6 +78,7 @@ export const Navbar = () => {
           {navItems.map((item, index) => (
             <NavbarMenuItem key={`${item.href}-${index}`}>
               <NextLink
+                onClick={handleMenuClose} // Close menu on item click
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
                   'data-[active=true]:text-primary data-[active=true]:font-medium'
@@ -79,7 +91,11 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
           <NavbarMenuItem>
-            <Link isExternal href="https://dev.posinnove.com/login">
+            <Link
+              isExternal
+              href="https://dev.posinnove.com/login"
+              onClick={handleMenuClose} // Close menu on button click
+            >
               <Button className="px-10 rounded-full text-primary">
                 Get started
               </Button>
