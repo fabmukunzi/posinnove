@@ -1,33 +1,54 @@
 import { Button } from '@nextui-org/button';
 import NextLink from 'next/link';
 import React from 'react';
+import twitter from '../public/TwitterX.png';
+import linkedin from '@/public/LinkedIn.png';
+import instagram from '@/public/Instagram.png';
+import Image from 'next/image';
 import { Input } from '@nextui-org/input';
-import { Instagram, Linkedin, Twitter } from 'lucide-react';
+import {
+  Instagram,
+  Link,
+  Linkedin,
+  Twitter,
+  X,
+  Mail,
+  MapPin,
+} from 'lucide-react';
 
 function Footer() {
   return (
-    <div className="bg-[#1a2748] w-full flex flex-col mt-10">
+    <div className="bg-[#303950] w-full flex flex-col mt-10">
       <div className="flex justify-around mx-[5%] mt-[5%] mb-[2%] text-white max-sm:flex-wrap max-sm:gap-5">
-        <div className="max-sm:w-[1/2]">
-          <h2 className="font-semibold text-xl pb-4">Learn More</h2>
-          <p>
-            <NextLink href="/about"> About us</NextLink>
-          </p>
-          <p>
-            <NextLink href="/#whatWeoffer">What We offer</NextLink>
-          </p>
-          <p>
-            <NextLink href="/#">Our Blogs</NextLink>
-          </p>
-          <p>
-            <NextLink href="/#">Our Offerings</NextLink>
-          </p>
-        </div>
+        {/* <div className="max-sm:w-[1/2]">
+					<h2 className="font-semibold text-xl pb-4">Learn More</h2>
+					<p>
+						<NextLink href="/about"> About us</NextLink>
+					</p>
+					<p>
+						<NextLink href="/#whatWeoffer">What We offer</NextLink>
+					</p>
+					<p>
+						<NextLink href="/#">Our Blogs</NextLink>
+					</p>
+					<p>
+						<NextLink href="/#">Our Offerings</NextLink>
+					</p>
+				</div> */}
         <div className="max-sm:w-[1/2]">
           <h2 className="font-semibold text-xl pb-4">Get in Touch</h2>
-          <p>KN 78 St, Kigali</p>
-          <p>Norrsken House Kigali</p>
-          <p>posinnove@gmail.com</p>
+          <NextLink target='blank' href="https://maps.app.goo.gl/8heWTWgL2WimVHjc7" className="flex items-center gap-2">
+            <div>
+              <MapPin />
+            </div>
+            <p>Norrsken House Kigali</p>
+          </NextLink>
+          <NextLink href='mailto:posinnove@gmail.com' className="flex items-center gap-2 my-3">
+            <div>
+              <Mail />
+            </div>
+            <p>posinnove@gmail.com</p>
+          </NextLink>
         </div>
         <div className="max-sm:w-[1/2] flex flex-col">
           <h2 className="font-semibold text-xl pb-4">Policy and Terms</h2>
@@ -93,7 +114,7 @@ function Footer() {
       </div>
       <div className="w-full flex justify-center">
         <p className="text-white pb-[2%] pt-[1%]">
-          © {new Date().getFullYear()} Posinnove Tech Solution
+        {new Date().getFullYear()} Posinnove Tech Solution
         </p>
       </div>
     </div>
