@@ -42,7 +42,7 @@ const Hero = () => {
               <p className='text-xl'>Complete projects for real companies, gain employable skills and build your professional network.</p>
               <div className='flex justify-between gap-4 w-[90%] max-md:w-full'>
                   <Button onClick={() => handleClick("https://form.jotform.com/241956791680570")} className='text-white max-md:px-14 bg-primary w-52' size='lg'>Join as organization</Button>
-                  <Button onClick={() => handleClick("https://dev.posinnove.com/login")}  variant="bordered" className='bg-white w-52 border-primary text-primary' size='lg'>Get started</Button>
+                  <Button onClick={() => handleClick("https://app.posinnove.com/login")}  variant="bordered" className='bg-white w-52 border-primary text-primary' size='lg'>Get started</Button>
               </div>
               <h1 className="mt-4 font-bold text-center text-primary md:text-2xl">
                   We are grateful for the support from

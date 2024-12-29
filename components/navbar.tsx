@@ -62,7 +62,7 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden md:flex">
-          <Link isExternal href="https://dev.posinnove.com/login">
+          <Link isExternal href="https://app.posinnove.com/login">
             <Button size="lg" className="px-10 text-primary">
               Get started
             </Button>
@@ -93,7 +93,7 @@ export const Navbar = () => {
           <NavbarMenuItem>
             <Link
               isExternal
-              href="https://dev.posinnove.com/login"
+              href="https://app.posinnove.com/login"
               onClick={handleMenuClose} // Close menu on button click
             >
               <Button className="px-10 rounded-full text-primary">
