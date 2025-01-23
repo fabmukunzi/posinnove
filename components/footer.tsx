@@ -114,7 +114,7 @@ function Footer() {
       </div>
       <div className="w-full flex justify-center">
         <p className="text-white pb-[2%] pt-[1%]">
-        {new Date().getFullYear()} Posinnove Tech Solution
+          {new Date().getFullYear()} Posinnove Tech Solution
         </p>
       </div>
     </div>

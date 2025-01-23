@@ -160,23 +160,23 @@ const Hero = () => {
                     Recognized by
                 </h1>
                 <div className='flex justify-between max-sm:hidden'>
-                    {organization1.map((item) => {
+                    {organization1.map((item,index) => {
                         return (
-                            <Image height={40} src={item.image} alt={item.name} />
+                            <Image key={index} height={40} src={item.image} alt={item.name} />
                         )
                     })}
                 </div>
                 <div className='flex justify-between max-sm:hidden'>
-                    {organization.map((item) => {
+                    {organization.map((item,index) => {
                         return (
-                            <Image height={40} src={item.image} alt={item.name} />
+                            <Image key={index} height={40} src={item.image} alt={item.name} />
                         )
                     })}
                 </div>
                 <div className='flex flex-wrap justify-between max-sm:gap-2 max-sm:justify-center sm:hidden'>
                     {orgzMobile.map((item) => {
                         return (
-                            <Image height={40} src={item.image} alt={item.name} />
+                            <Image key={item.name} height={40} src={item.image} alt={item.name} />
                         )
                     })}
                 </div>
