@@ -58,7 +58,7 @@ const StudentPage: React.FC = () => {
 						</p>
 						<div className="">
 							<Button className="bg-primary rounded-full hover:!bg-primary/90 hover:!text-white h-10 px-8 text-white">
-								<NextLink href={"https://dev.posinnove.com/"}>
+								<NextLink href={"https://app.posinnove.com/"}>
 									Get started
 								</NextLink>
 							</Button>
@@ -109,7 +109,7 @@ const StudentPage: React.FC = () => {
 								<div className="flex flex-col items-center space-y-10 lg:py-10 py-5">
 									<ProjectsAndCourses />
 									<Button className="bg-primary rounded-full hover:!bg-primary/90 hover:!text-white h-10 px-8 text-white">
-										<NextLink href={"https://dev.posinnove.com/"}>
+										<NextLink href={"https://app.posinnove.com/"}>
 											Get started
 										</NextLink>
 									</Button>
