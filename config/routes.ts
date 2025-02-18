@@ -13,7 +13,7 @@ export const navItems = [
 	},
 	{
 		label: "Blogs",
-		href: "./#",
+		href: "/blogs",
 	},
 	{
 		label: "FAQ",

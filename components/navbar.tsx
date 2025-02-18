@@ -1,19 +1,19 @@
 "use client"
 
 import {
-  Navbar as NextUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
-  NavbarBrand,
-  NavbarItem,
-  NavbarMenuItem,
   Button,
-  Link
+  Link,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+  Navbar as NextUINavbar
 } from '@nextui-org/react';
 import { link as linkStyles } from '@nextui-org/theme';
-import NextLink from 'next/link';
 import clsx from 'clsx';
+import NextLink from 'next/link';
 import { useState } from 'react';
 
 import { Logo } from '@/components/icons';
@@ -31,7 +31,7 @@ export const Navbar = () => {
   };
 
   return (
-    <NextUINavbar maxWidth="xl" className="fixed" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <NextUINavbar maxWidth="xl" className="fixed z-[999]" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex items-center justify-start gap-1" href="/">
