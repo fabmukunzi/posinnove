@@ -96,7 +96,7 @@ function Footer() {
           <h2 className="font-semibold text-xl pb-4">Get in Touch</h2>
           <p>KN 78 St, Kigali</p>
           <p>Norrsken House Kigali</p>
-          <p>posinnove@gmail.com</p>
+          <p>team@posinnove.com</p>
         </div>
         <div className="max-sm:w-[1/2] flex flex-col">
           <h2 className="font-semibold text-xl pb-4">Policy and Terms</h2>
