@@ -43,11 +43,11 @@ function Footer() {
             </div>
             <p>Norrsken House Kigali</p>
           </NextLink>
-          <NextLink href='mailto:posinnove@gmail.com' className="flex items-center gap-2 my-3">
+          <NextLink href='mailto:team@posinnove.com' className="flex items-center gap-2 my-3">
             <div>
               <Mail />
             </div>
-            <p>posinnove@gmail.com</p>
+            <p>team@posinnove.com</p>
           </NextLink>
         </div>
         <div className="max-sm:w-[1/2] flex flex-col">
